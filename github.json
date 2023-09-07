@@ -253,6 +253,7 @@
             }
           },
           "mappings": [],
+          "noValue": "0",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -301,8 +302,9 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "exemplar": true,
+          "exemplar": false,
           "expr": "sum by (referrer) (github_repo_traffic_referring_sites_unique_vistors{owner=\"$owner\"} and on(owner,repository) github_repo_is_fork{repository=~\"$repositories\"} <= $forks)",
+          "instant": false,
           "interval": "",
           "legendFormat": "{{referrer}}",
           "range": true,
@@ -1661,6 +1663,6 @@
   "timezone": "",
   "title": "Github",
   "uid": "b430226a-b31f-4d9b-8d33-25494a996146",
-  "version": 1,
+  "version": 2,
   "weekStart": ""
 }
